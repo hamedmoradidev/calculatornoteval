@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+#info{
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    >h1{
+        font-size: 20px;
+        font-weight: 500;
+    }
+    >a{
+        text-decoration: none;
+        color: white;
+        margin-left: 20px;
+    }
+}
+#calculator{
+    width: 390px;
+    height: 649px;
+    position: relative;
+}
+#subDisplay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: right;
+    border: none;
+
+}
+#display{
+    height: 151px;
+    width: 100%;
+    color: black;
+    background-color: white;
+    font-size: 48px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 50px;
+    background-color: white;
+}
+#keyboard{
+    padding: 40px;
+    height: 498px;
+    width: 100%;
+    background-color: #F5F5F5;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    >button{
+        font-family:Arial, Helvetica, sans-serif;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: #F5F5F5;
+        font-size: 20px;
+        &:hover{
+            background-color: rgb(233, 233, 233)
+        }
+        &:active{
+            background-color: rgb(103, 103, 103)
+        }
+        >svg{
+            height: 20px;
+        }
+        &:nth-of-type(16){
+            background-image: linear-gradient(#ED0E98,#FE5A2D);
+            box-shadow: 0px 8px 15px 4px #F73C57;
+            color: white;
+            height: 140px;
+            grid-area: 4/4/6/5;
+            border-radius: 32px;
+            font-size: 25px;
+            &:hover{
+                box-shadow: 0px 8px 20px 4px #F73C57;
+            }
+            &:active{
+                background-image: linear-gradient(#FE5A2D,#ED0E98);
+            }
+        }
+        &:nth-of-type(17){
+            color: #ED0E98;
+        }
+        &:nth-of-type(1){
+            color: #ED0E98; 
+            border: 2px solid #e9e9e9;
+        }
+        &:nth-of-type(2){
+        background-color: #e9e9e9;
+        font-size: 25px;
+        &:hover{
+            background-color: rgb(184, 184, 184)
+        }
+        &:active{
+            background-color: rgb(103, 103, 103)
+        }
+        }
+        &:nth-of-type(3){
+            background-color: #e9e9e9;
+            font-size: 25px;
+            &:hover{
+                background-color: rgb(184, 184, 184)
+            }
+            &:active{
+                background-color: rgb(103, 103, 103)
+            }    
+        }
+        &:nth-of-type(4){
+            background-color: #e9e9e9;
+            font-size: 25px;
+            &:hover{
+                background-color: rgb(184, 184, 184)
+            }
+            &:active{
+                background-color: rgb(103, 103, 103)
+            }    
+        }
+        &:nth-of-type(8){
+            background-color: #e9e9e9;
+            font-size: 25px;
+            &:hover{
+                background-color: rgb(184, 184, 184)
+            }
+            &:active{
+                background-color: rgb(103, 103, 103)
+            }    
+        }
+        &:nth-of-type(12){
+            background-color: #e9e9e9;
+            font-size: 25px;
+            &:hover{
+                background-color: rgb(184, 184, 184)
+            }
+            &:active{
+                background-color: rgb(103, 103, 103)
+            }    
+        }
+    }
+}
+
+.nightMode{
+    #display{
+        background-color: #222327;
+    }
+    #keyboard{
+        background-color: #27292E;
+        >button{
+                background-color: #27292E;
+                color: white;
+                &:hover{
+                    background-color: #333439;
+                }
+                &:active{
+                    background-color: #494b52;
+                }        
+                &:nth-of-type(1){
+                color: #ED0E98;
+                border: 2px solid #333439;
+                &:hover{
+                    background-color: #333439;
+                }
+                &:active{
+                    background-color: #494b52;
+                }        
+                }
+                &:nth-of-type(2){
+                background-color: #333439;
+                &:hover{
+                    background-color: #6e6e6e;
+                }
+                &:active{
+                    background-color: #929292;
+                }        
+                }
+                &:nth-of-type(3){
+                background-color: #333439;
+                &:hover{
+                    background-color: #6e6e6e;
+                }
+                &:active{
+                    background-color: #929292;
+                }        
+                }
+                &:nth-of-type(4){
+                background-color: #333439;
+                &:hover{
+                    background-color: #6e6e6e;
+                }
+                &:active{
+                    background-color: #929292;
+                }        
+                }
+                &:nth-of-type(8){
+                background-color: #333439;
+                &:hover{
+                    background-color: #6e6e6e;
+                }
+                &:active{
+                    background-color: #929292;
+                }        
+                }
+                &:nth-of-type(12){
+                background-color: #333439;
+                &:hover{
+                    background-color: #6e6e6e;
+                }
+                &:active{
+                    background-color: #929292;
+                }        
+                }
+                &:nth-of-type(17){
+                color: #ED0E98;
+                }
+            }
+    }
+    #display{
+        background-color: #212327;
+        color: white;
+    }
+}
